@@ -36,9 +36,9 @@ void Timer0_Routine()  interrupt 1
     if (buttonCount==20){Button_detect();}
 }
 unsigned int buttonState=1;//记录按钮当前状态
-unsigned int lastButtinState=1;//记录按钮上个状态
+unsigned int lastButtonState=1;//记录按钮上个状态
 unsigned int state=0;//记录按钮是否按下，按下状态为1，松开状态为0
-bool flag=false;
+unsigned int flag=0;
 /**
  * @brief 按钮探测函数，每次1ms中断时探测按钮状态
  * @param 无
@@ -58,7 +58,7 @@ void Button_detect()
         }
 
     }
-    lastButtinState=buttonState;
+    lastButtonState=buttonState;
 }
 
 void main()
