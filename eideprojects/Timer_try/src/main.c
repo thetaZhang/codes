@@ -10,6 +10,7 @@
 */
 
 #include <reg52.h>
+#include "Timer.h"
 #include <stdio.h>
 
 unsigned int COUNT_Timer0=1000;//定时器计数上限
@@ -18,6 +19,7 @@ unsigned int COUNT_Timer0=1000;//定时器计数上限
   * @param 无
   * @retval 无
   */
+void Button_detect();
 void Timer0_Routine()  interrupt 1
 {
     static unsigned int T0Count;//计时器计数
@@ -29,7 +31,7 @@ void Timer0_Routine()  interrupt 1
     buttonCount++;if (buttonCount>20) {buttonCount-=20;}
     if(T0Count>=COUNT_Timer0)
     {
-        P20=~P20;
+        P20=!P20;
         T0Count=0;
         
     }
