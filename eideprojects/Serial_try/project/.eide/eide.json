@@ -1,1 +1,46 @@
-{"name":"project","type":"C51","mode":"Debug","toolchain":"SDCC","uploader":"Custom","dependenceList":[{"groupName":"custom","depList":[{"name":"default","incList":[],"libList":[],"sourceDirList":[],"defineList":[]}]},{"groupName":"build-in","depList":[{"name":"default","incList":[],"libList":[],"sourceDirList":[],"defineList":[]},{"name":"toolchain","incList":[".\\..\\..\\..\\..\\..\\..\\..\\SDCC\\SDCC-v4.0.0\\include",".\\..\\..\\..\\..\\..\\..\\..\\SDCC\\SDCC-v4.0.0\\non-free\\include"],"sourceDirList":[],"libList":[".\\..\\..\\..\\..\\..\\..\\..\\SDCC\\SDCC-v4.0.0\\lib"],"defineList":[]}]}],"compileConfig":{"options":"null"},"srcDirs":[".\\src",".\\inc"],"virtualFolder":[],"excludeList":[],"outDir":".\\build","deviceName":null,"packDir":null,"uploadConfig":{"bin":"","commandLine":"python ./tools/stcflash.py -p ${port} \"${hexFile}\""},"miscInfo":{},"targets":{},"version":"2.0"}
+{
+  "name": "project",
+  "type": "C51",
+  "dependenceList": [],
+  "srcDirs": [
+    "src",
+    "inc"
+  ],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": []
+  },
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": null,
+  "miscInfo": {
+    "uid": "d7e9949df6d5fc0af5677d5c1ed964fd"
+  },
+  "targets": {
+    "Debug": {
+      "excludeList": [],
+      "toolchain": "SDCC",
+      "compileConfig": {
+        "options": "null"
+      },
+      "uploader": "Custom",
+      "uploadConfig": {
+        "bin": "",
+        "commandLine": "python ./tools/stcflash.py -p ${port} \"${hexFile}\"",
+        "eraseChipCommand": ""
+      },
+      "uploadConfigMap": {},
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "../../Tools/Timer0"
+        ],
+        "libList": [],
+        "sourceDirList": [],
+        "defineList": []
+      }
+    }
+  },
+  "version": "3.3"
+}
