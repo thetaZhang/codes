@@ -36,7 +36,9 @@
         "incList": [
           "../../Tools/Timer0"
         ],
-        "libList": [],
+        "libList": [
+          "../../Tools/Timer0"
+        ],
         "sourceDirList": [],
         "defineList": []
       }
