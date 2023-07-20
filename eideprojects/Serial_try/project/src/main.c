@@ -35,3 +35,17 @@ void UART_Init()
 
 
 }
+
+void UART_SendByte(unsigned char byte)
+{
+    SBUF=byte;          //将byte直接写入寄存器SBUF即可发送
+
+}
+
+void main()
+{
+    UART_Init();
+    while(1){
+
+    }
+}
