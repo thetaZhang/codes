@@ -34,8 +34,8 @@
       "custom_dep": {
         "name": "default",
         "incList": [
-          "../../Tools/Timer0",
-          "inc"
+          "inc",
+          "../../Tools/Timer0"
         ],
         "libList": [
           "../../Tools/Timer0"
