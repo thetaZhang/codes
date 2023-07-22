@@ -39,7 +39,8 @@ void UART_Init()
 void UART_SendByte(unsigned char byte)
 {
     SBUF=byte;          //将byte直接写入寄存器SBUF即可发送
-
+    while(TI==0);       //TI为1时候才发送结束
+    TI=0;
 }
 
 void main()
