@@ -4,25 +4,13 @@
   "dependenceList": [],
   "srcDirs": [
     "src",
-    "inc"
+    "inc",
+    "../../Tools/inc"
   ],
   "virtualFolder": {
     "name": "<virtual_root>",
     "files": [],
-    "folders": [
-      {
-        "name": "include",
-        "files": [
-          {
-            "path": "../../Tools/UART/UART.c"
-          },
-          {
-            "path": "../../Tools/UART/UART.h"
-          }
-        ],
-        "folders": []
-      }
-    ]
+    "folders": []
   },
   "outDir": "build",
   "deviceName": null,
@@ -49,9 +37,13 @@
       "custom_dep": {
         "name": "default",
         "incList": [
-          "inc"
+          "inc",
+          "../../Tools/head"
         ],
-        "libList": [],
+        "libList": [
+          "../../Tools/head",
+          "../../Tools/inc"
+        ],
         "sourceDirList": [],
         "defineList": []
       }

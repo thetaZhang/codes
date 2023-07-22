@@ -9,18 +9,34 @@
 */
 #include <UART.h>
 #include <reg52.h>
-#include <Delay.h>
 #include <stdio.h>
+#include <Timer0.h>
 
 
 
+unsigned char Sec=0x61;
+unsigned int counter=0;
 
+void Timer0_Routine()  interrupt 1
+{
+    
+    TH0=64535/256;
+    TL0=64535%256;
+    counter++;
+    
+}
 
 void main()
 {
+    Timer0_Init();
     UART_Init();
+    UART_SendByte(Sec);
     while(1){
-        UART_SendByte(0x66);
-        Delay_ms(1);
+        if (counter>=1000) {
+            UART_SendByte(Sec);
+            Sec++;
+            counter=0;
+        }
+        
     }
 }
