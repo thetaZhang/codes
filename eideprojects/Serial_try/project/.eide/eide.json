@@ -4,13 +4,25 @@
   "dependenceList": [],
   "srcDirs": [
     "src",
-    "inc",
-    "../../Tools/Delay"
+    "inc"
   ],
   "virtualFolder": {
     "name": "<virtual_root>",
     "files": [],
-    "folders": []
+    "folders": [
+      {
+        "name": "include",
+        "files": [
+          {
+            "path": "../../Tools/UART/UART.c"
+          },
+          {
+            "path": "../../Tools/UART/UART.h"
+          }
+        ],
+        "folders": []
+      }
+    ]
   },
   "outDir": "build",
   "deviceName": null,
@@ -20,7 +32,9 @@
   },
   "targets": {
     "Debug": {
-      "excludeList": [],
+      "excludeList": [
+        "<virtual_root>/include"
+      ],
       "toolchain": "SDCC",
       "compileConfig": {
         "options": "null"
