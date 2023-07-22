@@ -9,6 +9,7 @@
 */
 
 #include <reg52.h>
+#include "Delay_ms.h"
 #include <stdio.h>
 
 /**
@@ -51,6 +52,7 @@ void main()
 {
     UART_Init();
     while(1){
-
+        UART_SendByte(0x66);
+        Delay_ms(1);
     }
 }

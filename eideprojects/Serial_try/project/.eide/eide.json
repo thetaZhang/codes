@@ -35,10 +35,12 @@
         "name": "default",
         "incList": [
           "inc",
-          "../../Tools/Timer0"
+          "../../Tools/Timer0",
+          "../../Tools/Delay_ms"
         ],
         "libList": [
-          "../../Tools/Timer0"
+          "../../Tools/Timer0",
+          "../../Tools/Delay_ms"
         ],
         "sourceDirList": [],
         "defineList": []
