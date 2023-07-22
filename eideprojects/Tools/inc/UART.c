@@ -38,15 +38,22 @@ void UART_SendByte(unsigned char byte)
     while(TI==0);       //TI为1时候才发送结束
     TI=0;
 }
-
+/*
 /**
  * @brief 串口中断服务函数
  * 
- */
+ *
 void UART_Routine() interrupt 4
 {
     if (RI==1)     //判断为接收中断
     {
         
+        RI=0;
+    }
+    if (TI==1)     //判断为发送中断
+    {
+
+        TI=0;
     }
 }
+*/
