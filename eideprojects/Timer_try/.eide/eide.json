@@ -19,7 +19,9 @@
   },
   "targets": {
     "Debug": {
-      "excludeList": [],
+      "excludeList": [
+        "src/Timer.c"
+      ],
       "toolchain": "SDCC",
       "compileConfig": {
         "options": "null"
@@ -34,7 +36,8 @@
       "custom_dep": {
         "name": "default",
         "incList": [
-          "inc"
+          "inc",
+          "../Tools/Timer0"
         ],
         "libList": [
           "inc"

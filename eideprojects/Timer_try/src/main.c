@@ -10,7 +10,7 @@
 */
 
 #include <reg52.h>
-#include "Timer.h"
+#include "Timer0.h"
 #include <stdio.h>
 
 unsigned int COUNT_Timer0=1000;//定时器计数上限

@@ -4,7 +4,8 @@
   "dependenceList": [],
   "srcDirs": [
     "src",
-    "inc"
+    "inc",
+    "../../Tools/Delay"
   ],
   "virtualFolder": {
     "name": "<virtual_root>",
@@ -34,14 +35,9 @@
       "custom_dep": {
         "name": "default",
         "incList": [
-          "inc",
-          "../../Tools/Timer0",
-          "../../Tools/Delay_ms"
+          "inc"
         ],
-        "libList": [
-          "../../Tools/Timer0",
-          "../../Tools/Delay_ms"
-        ],
+        "libList": [],
         "sourceDirList": [],
         "defineList": []
       }
