@@ -35,7 +35,11 @@ void UART_Init()
 
 
 }
-
+/**
+ * @brief 单片机接受上位机发送的字符
+ * 
+ * @param byte 要发送的字符
+ */
 void UART_SendByte(unsigned char byte)
 {
     SBUF=byte;          //将byte直接写入寄存器SBUF即可发送
