@@ -16,13 +16,11 @@
   "deviceName": null,
   "packDir": null,
   "miscInfo": {
-    "uid": "d7e9949df6d5fc0af5677d5c1ed964fd"
+    "uid": "23f8bb3c5c42bb628a707947c32458bb"
   },
   "targets": {
     "Debug": {
-      "excludeList": [
-        "<virtual_root>/include"
-      ],
+      "excludeList": [],
       "toolchain": "SDCC",
       "compileConfig": {
         "options": "null"
@@ -37,7 +35,6 @@
       "custom_dep": {
         "name": "default",
         "incList": [
-          "inc",
           "../../Tools/head"
         ],
         "libList": [],
