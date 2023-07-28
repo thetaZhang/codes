@@ -16,7 +16,7 @@
   "deviceName": null,
   "packDir": null,
   "miscInfo": {
-    "uid": "23f8bb3c5c42bb628a707947c32458bb"
+    "uid": "25f238a674f89e85a8510e38ab405044"
   },
   "targets": {
     "Debug": {
@@ -35,8 +35,8 @@
       "custom_dep": {
         "name": "default",
         "incList": [
-          "../../Tools/head",
-          "../../Tools/inc"
+          "../../Tools/inc",
+          "inc"
         ],
         "libList": [],
         "sourceDirList": [],
