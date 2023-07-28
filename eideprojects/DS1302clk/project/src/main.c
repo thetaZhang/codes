@@ -16,8 +16,7 @@
 void main()
 {
     LCD_Init();
-    LCD_ShowNum(1,1,1,1);
-    
+        
     while (1)
     {
       

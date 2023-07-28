@@ -4,7 +4,7 @@
 __sbit __at(0xA0+6) LCD_RS;
 __sbit __at(0xA0+5) LCD_RW;
 __sbit __at(0xA0+7) LCD_EN;
-__sfr __at(0x80) LCD_DataPort;
+#define LCD_DataPort P0
 
 //函数定义：
 /**
