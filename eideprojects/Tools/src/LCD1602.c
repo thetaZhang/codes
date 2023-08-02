@@ -1,10 +1,10 @@
 #include <reg52.h>
 
 //引脚配置：
-__sbit __at(0xA0+6) LCD_RS;
-__sbit __at(0xA0+5) LCD_RW;
-__sbit __at(0xA0+7) LCD_EN;
-#define LCD_DataPort P0
+__sbit __at(0xB0+0) LCD_RS;
+__sbit __at(0xB0+1) LCD_RW;
+__sbit __at(0xB0+2) LCD_EN;
+#define LCD_DataPort P2
 
 //函数定义：
 /**
@@ -33,6 +33,7 @@ void LCD_WriteCommand(unsigned char Command)
 {
 	LCD_RS=0;
 	LCD_RW=0;
+    LCD_EN=0;
 	LCD_DataPort=Command;
 	LCD_EN=1;
 	LCD_Delay();
@@ -49,6 +50,7 @@ void LCD_WriteData(unsigned char Data)
 {
 	LCD_RS=1;
 	LCD_RW=0;
+    LCD_EN=0;
 	LCD_DataPort=Data;
 	LCD_EN=1;
 	LCD_Delay();
