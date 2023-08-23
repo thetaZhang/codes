@@ -45,6 +45,7 @@ void DS1302_WriteByte(unsigned char Command,unsigned char Data)
  */
 unsigned char DS1302_ReadByte(unsigned char Command)
 {
+    DS1302_CE=1;
     unsigned char Data=0x00;
     for (int i=0;i<8;i++)
     {
