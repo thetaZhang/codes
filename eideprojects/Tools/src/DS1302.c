@@ -57,7 +57,7 @@ unsigned char DS1302_ReadByte(unsigned char Command)
     {
         DS1302_SCLK=1;
         DS1302_SCLK=0;
-        if (DS1302_IO) {Date|=(0x01<<i);}
+        if (DS1302_IO) {Data|=(0x01<<i);}
     }
     DS1302_CE=0;
     return Data;
