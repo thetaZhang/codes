@@ -16,11 +16,11 @@
 void main()
 {
     LCD_Init();
-    LCD_ShowChar(2,2,'a');
+    
         
     while (1)
     {
-      
+        
     }
 }
 
