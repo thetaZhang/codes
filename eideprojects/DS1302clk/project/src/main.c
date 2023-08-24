@@ -34,7 +34,7 @@ void ShowTime()
     second_1=Second&0x0F;
     LCD_ShowNum(2,8,second_1,1);
     second_10=(Second>>4)&0x07;
-    LCD_ShowNum(2,7,second_10,1);
+    LCD_ShowNum(2,7,second_10,1);   //DS1302存时间是BCD码
         
     Minute=DS1302_ReadByte(0x83);
     minute_1=Minute&0x0F;
@@ -73,9 +73,9 @@ void ShowDate()
     LCD_ShowNum(2,7,month_10,1);
 
     Year=DS1302_ReadByte(0x8D);
-    year_1=year&0x0F;
+    year_1=Year&0x0F;
     LCD_ShowNum(2,8,year_1,1);
-    year_10=(year>>4)&0x0F;
+    year_10=(Year>>4)&0x0F;
     LCD_ShowNum(2,7,year_10,1);
 
     LCD_ShowString(1,1,weekday[DS1302_ReadByte(0x8B)-1]); 
@@ -93,7 +93,7 @@ void Timer0_Routine()  interrupt 1
     if(T0Count>=1000)
     {
        //在这里写上中断处理内容
-        if 
+        
        //
         T0Count=0;
         
