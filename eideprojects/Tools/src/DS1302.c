@@ -1,3 +1,15 @@
+/**
+ * @file DS1302.c
+ * @author theta
+ * @brief DS1302模块
+ * @version 0.1
+ * @date 2023-08-24
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
+
 #include <DS1302.h>
 #include <reg52.h>
 #include <stdio.h>
