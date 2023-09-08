@@ -35,8 +35,8 @@
       "custom_dep": {
         "name": "default",
         "incList": [
-          "../../Tools/inc",
-          "inc"
+          "inc",
+          "../../Tools/inc"
         ],
         "libList": [],
         "sourceDirList": [],
