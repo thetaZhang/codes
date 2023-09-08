@@ -64,11 +64,16 @@ void main()
 
     while (1)
     {
-        if (!MODE){
+        if ()
+        switch (MODE)
+        {
+        case 0:
             ShowTime();
-        }
-        else {
+            break;
+        
+        case 1:
             SetTime();
+            break;
         }
         Delay_ms(10);
     }
