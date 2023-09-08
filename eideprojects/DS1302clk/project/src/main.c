@@ -13,8 +13,14 @@
 #include <LCD1602.h>
 #include <DS1302.h>
 #include <Delay.h>
+#include <Timer0.h>
 
+unsigned char MODE=0; //0为显示1为设置
 
+__sbit __at(0x90+0) B1;
+__sbit __at(0x90+1) B2;
+__sbit __at(0x90+2) B3;
+__sbit __at(0x90+3) B4;
 
 char* weekday[7]={"Mon", "Tue", "Wed", "Thu","Fri", "Sat", "Sun"};
 
@@ -35,7 +41,14 @@ void ShowTime()
     LCD_ShowString(1,14,weekday[DS1302_Time[6]-1]);
 }
 
+/**
+ * @brief 
+ * 
+ */
+void SetTime()
+{
 
+}
 
 
 void main()
@@ -51,8 +64,12 @@ void main()
 
     while (1)
     {
-        
-        ShowTime();
+        if (!MODE){
+            ShowTime();
+        }
+        else {
+            SetTime();
+        }
         Delay_ms(10);
     }
 }
